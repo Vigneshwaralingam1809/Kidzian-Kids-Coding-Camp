@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+header {
+    background: #f9c74f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+header h1 {
+    font-size: 2.5rem;
+}
+header .btn-register {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #90be6d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+header .btn-register:hover {
+    background: #43aa8b;
+}
+.course-highlights {
+    padding: 2rem;
+    background: #f1f1f1;
+    text-align: center;
+}
+.course-highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.course {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.course img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+.contact-us {
+    padding: 2rem;
+    background: #f9c74f;
+    color: #fff;
+    text-align: center;
+}
+.contact-us h2 {
+    font-size: 2rem;
+}
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-us input, .contact-us textarea {
+    width: 80%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+.contact-us .btn-submit {
+    padding: 0.8rem 1.5rem;
+    background: #90be6d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.contact-us .btn-submit:hover {
+    background: #43aa8b;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+footer a {
+    color: #f9c74f;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+footer a:hover {
+    text-decoration: underline;
+}
