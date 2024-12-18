@@ -7,37 +7,78 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hero-section">
-        <h1>Code, Create, Conquer!</h1>
-        <p>Empowering young minds to shape the future through coding.</p>
-        <a href="#contact" class="btn-register">Register Now!</a>
+    <header>
+        <nav class="navbar">
+            <a href="#hero">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#register">Register</a>
+            <a href="#feedback">Feedback</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section id="hero" class="hero-section">
+            </h1>🌟 Kidzian Kids Coding Camp 🌟</h1>
+            <h2></h2>
+            <p>Unleash your creativity through coding! Join the fun today!</p>
+            <a href="#register" class="btn-register">Register Now!</a>
+        </section>
     </header>
 
     <main>
-        <section class="course-highlights">
-            <h2>Course Highlights</h2>
+        <section id="courses" class="course-highlights">
+            <h2>🚀 Explore Our Coding Courses 🚀</h2>
             <div class="courses">
                 <div class="course">
                     <img src="https://via.placeholder.com/100" alt="Python">
                     <h3>Python for Kids</h3>
                     <p>Learn programming basics with fun projects.</p>
+                    <button class="btn-details" onclick="showDetails('Python for Kids', 'Learn programming basics with fun projects.', '$200')">Details</button>
                 </div>
                 <div class="course">
                     <img src="https://via.placeholder.com/100" alt="Web Development">
                     <h3>Web Development</h3>
                     <p>Create your own websites and blogs.</p>
+                    <button class="btn-details" onclick="showDetails('Web Development', 'Learn HTML, CSS, and JavaScript to create your own websites.', '$300')">Details</button>
                 </div>
                 <div class="course">
                     <img src="https://via.placeholder.com/100" alt="Game Development">
                     <h3>Game Development</h3>
                     <p>Design and code exciting games.</p>
+                    <button class="btn-details" onclick="showDetails('Game Development', 'Design and build your own games using coding principles.', '$400')">Details</button>
                 </div>
             </div>
+            <div id="course-info" class="course-info"></div>
+        </section>
+
+        <section id="register" class="register-section">
+            <h2>🎉 Join the Fun! Register Now 🎉</h2>
+            <form id="registrationForm">
+                <input type="text" id="regName" name="name" placeholder="Your Name" required>
+                <input type="text" id="qualification" name="qualification" placeholder="Education Qualification" required>
+                <input type="email" id="regEmail" name="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number" required>
+                <label for="courseSelect">Choose a Course:</label>
+                <select id="courseSelect" name="course" required>
+                    <option value="Python for Kids">Python for Kids</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Game Development">Game Development</option>
+                </select>
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="reset" class="btn-refresh">Refresh Details</button>
+            </form>
+        </section>
+
+        <section id="feedback" class="feedback-section">
+            <h2>💬 We Value Your Feedback 💬</h2>
+            <form id="feedbackForm">
+                <textarea id="comments" name="comments" placeholder="Your Feedback" required></textarea>
+                <button type="submit" class="btn-submit">Submit Feedback</button>
+            </form>
         </section>
 
         <section id="contact" class="contact-us">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
+            <h2>📞 Contact Us 📞</h2>
+            <form id="contactForm"></form>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
@@ -47,7 +88,7 @@
     </main>
 
     <footer>
-        <p>Follow us:</p>
+        <p>🌈 Follow us:</p>
         <a href="#" target="_blank">Facebook</a> | 
         <a href="#" target="_blank">Instagram</a> | 
         <a href="#" target="_blank">Twitter</a>
