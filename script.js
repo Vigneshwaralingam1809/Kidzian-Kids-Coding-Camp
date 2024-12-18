@@ -1,19 +1,19 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Form validation
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    if (!name || !email || !message) {
-        alert('All fields are required!');
-        return;
-    }
-    
-    // Success alert
-    alert('Thank you for contacting us! We will get back to you soon.');
-    
-    // Reset form
-    document.getElementById('contactForm').reset();
+// Smooth scrolling
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        section.scrollIntoView({ behavior: 'smooth' });
+    });
 });
+
+// Show course details
+function showDetails(title, description, price) {
+    const info = document.getElementById('course-info');
+    info.innerHTML = `
+        <h3>${title}</h3>
+        <p>${description}</p>
+        <p><strong>Fees:</strong> ${price}</p>
+    `;
+    info.style.display = 'block';
+}
