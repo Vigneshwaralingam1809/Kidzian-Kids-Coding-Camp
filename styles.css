@@ -1,103 +1,198 @@
-/* General Styles */
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background: #e3f2fd; /* Very light blue background */
     color: #333;
 }
-header {
-    background: #f9c74f;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #1976d2; /* Medium blue */
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-header h1 {
-    font-size: 2.5rem;
-}
-header .btn-register {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background: #90be6d;
+.navbar a {
     color: #fff;
-    border: none;
-    border-radius: 5px;
+    margin: 0 1rem;
     text-decoration: none;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-header .btn-register:hover {
-    background: #43aa8b;
+.navbar a:hover {
+    color: #bbdefb; /* Light blue hover */
 }
-.course-highlights {
-    padding: 2rem;
-    background: #f1f1f1;
+
+/* Hero Section */
+.hero-section {
     text-align: center;
+    padding: 4rem 2rem;
+    color: #fff;
+    background: #64b5f6; /* Sky blue */
 }
-.course-highlights h2 {
+.hero-section h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.btn-register {
+    background: #1565c0; /* Darker blue */
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+.btn-register:hover {
+    background: #0d47a1; /* Even darker blue */
+    transform: scale(1.1);
+}
+
+/* Courses Section */
+.course-highlights {
+    background: #bbdefb; /* Light blue */
+    padding: 2rem;
+    text-align: center;
 }
 .courses {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 .course {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 30%;
-    margin: 1rem;
+    background: #90caf9; /* Medium-light blue */
     padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s;
 }
 .course img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 1rem;
 }
-.contact-us {
-    padding: 2rem;
-    background: #f9c74f;
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-details {
+    background: #1976d2; /* Medium blue */
     color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+.btn-details:hover {
+    background: #0d47a1; /* Darker blue */
+}
+
+/* Register Section */
+.register-section {
+    background: #e3f2fd; /* Very light blue */
+    padding: 2rem;
     text-align: center;
 }
-.contact-us h2 {
-    font-size: 2rem;
-}
-.contact-us form {
+.register-section form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
-.contact-us input, .contact-us textarea {
-    width: 80%;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border: none;
+.register-section input, 
+.register-section select, 
+.register-section button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #90caf9;
     border-radius: 5px;
+    font-size: 1rem;
 }
-.contact-us .btn-submit {
-    padding: 0.8rem 1.5rem;
-    background: #90be6d;
+.register-section button {
+    background: #1976d2;
     color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.register-section button:hover {
+    background: #0d47a1;
+}
+
+/* Feedback Section */
+.feedback-section {
+    background: #bbdefb; /* Light blue */
+    padding: 2rem;
+    text-align: center;
+}
+.feedback-section textarea {
+    width: 80%;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid #64b5f6;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.feedback-section button {
+    background: #1976d2;
+    color: #fff;
+    padding: 0.8rem 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
 }
-.contact-us .btn-submit:hover {
-    background: #43aa8b;
+.feedback-section button:hover {
+    background: #0d47a1;
 }
+
+/* Contact Section */
+.contact-us {
+    background: #e3f2fd; /* Very light blue */
+    padding: 2rem;
+    text-align: center;
+}
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.contact-us textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
 footer {
+    background: #1565c0; /* Darker blue */
+    color: #fff;
     text-align: center;
     padding: 1rem;
-    background: #333;
-    color: #fff;
 }
 footer a {
-    color: #f9c74f;
+    color: #bbdefb;
     text-decoration: none;
     margin: 0 0.5rem;
 }
